@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang='english'>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/main.css">
+    <script type="text/javascript" async="async" defer="defer" src="application.js"></script>
+  </head>
+  <body>
+    
+<!--Applications -->
+<div class="todo-container">
+  <h1>Bootstrap To-Do App</h1>
+  <div class="add-todo-container row">
+    <div class="col-md-10">
+      <input class="form-control" type="text" placeholder="new todo">
+    </div>
+    <div class="col-md-2">
+      <button class="btn btn-primary">Add</button> 
+    </div>
+  </div>
+  <ul class="list-group"></ul>
+</div>
+
+<!-- Templates -->
+<script type="text/x-template">  <li class="list-group-item row {{#if completed}}disabled{{/if}}">
+  <div class="col-md-1">
+    <input type="checkbox" {{#if completed}}checked{{/if}} ></div> 
+  <div class="col-md-10" role="listitem">{{title}}</div>
+  <div class="col-md-1">
+    <button type="button" class="glyphicon glyphicon-remove" style="border: none; background-color: white"></button>
+  </div>
+</li>
+</script>
+  </body>
+</html>
