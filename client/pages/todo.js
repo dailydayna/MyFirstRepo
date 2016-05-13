@@ -1,14 +1,14 @@
 
 var $ = require('jquery');
-​
+
 //  legacy loading for bootstrap for es5
 window.jQuery = window.$ = $;
 require('bootstrap');
-​
+
 import _ from 'underscore';
 import Handlebars from 'handlebars';
 import lscache from 'lscache';
-​
+
 
 var savedData = lscache.get('toDos');
 var toDos;
@@ -17,7 +17,7 @@ if (savedData === null){
 } else {
   toDos = savedData;
 }
-​
+
 //  Application controller aka the one main object that stores everything our app needs
 var template;
 var app = {
@@ -45,7 +45,7 @@ var app = {
   },
   compileTemplates: function(){
     //  template is a function that you pass the data object to.  You just have to know that....
-    template = $('[type="text/x-handlebars-template"]');
+    template = $('[type="text/x-template"]');
     template = Handlebars.compile(template.first().html());
   },
   bindEvents: function(){
@@ -54,7 +54,7 @@ var app = {
     app.bindAddTodoEvents();
     app.bindRemoveTodoEvent();
   },
-​
+
   bindHoverEvents: function(){
     var $items = $('.list-group-item');
     $items.on('mouseover', function(){
@@ -85,7 +85,7 @@ var app = {
         $('.add-todo-container input').val('');
         app.render();
       }
-​
+
     });
   },
   bindRemoveTodoEvent: function(){
@@ -96,6 +96,6 @@ var app = {
     });
   }
 };
-​
+
 module.exports = app;
-​
+

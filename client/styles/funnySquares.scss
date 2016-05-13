@@ -1,0 +1,44 @@
+
+h1 {
+	color: red;
+}
+
+.square {
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	background-color: #34c0ba;
+	text-align: center;
+	line-height: 100px;
+	font-family: arial;
+	font-size: 42px;
+	transform: none;
+	transition: transform .5s;
+
+}
+
+.square1:hover {
+	transform: skewX(45deg);
+	transition: transform .5s;
+}
+.square2:hover {
+	transform: skewX(45deg);
+	transition: transform .5s;
+}
+.square3:hover {
+	transform: scale(.8,.5);
+	transition: transform .5s;
+}
+.square4:hover {
+	transform: rotateY(45deg) rotateX(45deg);
+	transition: transform .5s;
+}
+.square5 {
+	perspective: 15px;
+}
+.square5:hover {
+	transform: rotateY(45deg) rotateX(45deg);
+	perspective-origin: 10px, 10px;
+	transition: transform .5s;
+}
+
