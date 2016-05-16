@@ -21,6 +21,7 @@ $(function(){
     case '/pages/funnySquares.html':
       funnySquares.init();
     break;
+    default: break;  
   }
 });
 
