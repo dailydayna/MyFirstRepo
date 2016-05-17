@@ -1,4 +1,4 @@
-
+// all imports require is es5 old way of doing import //
 var $ = require('jquery');
 
 //  legacy loading for bootstrap for es5
@@ -6,11 +6,11 @@ window.jQuery = window.$ = $;
 require('bootstrap');
 
 import _ from 'underscore';
-import Handlebars from 'handlebars';
+import handlebars from 'handlebars';
 import lscache from 'lscache';
 import rawTemplate from 'templates/todoItem.html';
 
-var savedData = lscache.get('todos');
+var savedData = lscache.get('savedTodos');
 var todos;
 if (savedData === null){
   todos = [];
@@ -27,12 +27,11 @@ var app = {
   },
   render: function(){
     //  render the todos
-    lscache.set('todos', todos);
-    //  we are createating a keyvalue pair on line 28
+    lscache.set('savedTodos', todos);
     var todoHtml = _.map(todos, function(toDo){
-     return template(toDo);
-     // the return value ends up being HTML code
-   });
+      return template(toDo);
+      // the return value ends up being HTML code
+    });
     app.unbindEvents();
     $('ul.list-group').html(todoHtml.join(''));
     app.bindEvents();
@@ -45,7 +44,7 @@ var app = {
     $('title-edit input').off();
   },
   compileTemplates: function(){
-    template = Handlebars.compile(rawTemplate);
+    template = handlebars.compile(rawTemplate);
   },
   bindEvents: function(){
     app.bindHoverEvents();

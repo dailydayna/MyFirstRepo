@@ -66,7 +66,13 @@
 	
 	var _pagesFunnySquares2 = _interopRequireDefault(_pagesFunnySquares);
 	
+	var _componentsHeader = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"components/header\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	
+	var _componentsHeader2 = _interopRequireDefault(_componentsHeader);
+	
 	(0, _jquery2['default'])(function () {
+	
+	  _componentsHeader2['default'].init();
 	
 	  // what page are we on?
 	  var url = window.location.pathname;
@@ -9949,6 +9955,7 @@
 /* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// all imports require is es5 old way of doing import //
 	'use strict';
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -9975,7 +9982,7 @@
 	window.jQuery = window.$ = $;
 	__webpack_require__(40);
 	
-	var savedData = _lscache2['default'].get('todos');
+	var savedData = _lscache2['default'].get('savedTodos');
 	var todos;
 	if (savedData === null) {
 	  todos = [];
@@ -9992,8 +9999,7 @@
 	  },
 	  render: function render() {
 	    //  render the todos
-	    _lscache2['default'].set('todos', todos);
-	    //  we are createating a keyvalue pair on line 28
+	    _lscache2['default'].set('savedTodos', todos);
 	    var todoHtml = _underscore2['default'].map(todos, function (toDo) {
 	      return template(toDo);
 	      // the return value ends up being HTML code
@@ -16794,7 +16800,7 @@
 /* 39 */
 /***/ function(module, exports) {
 
-	module.exports = "<li class=\"list-group-item row {{#if completed}}disabled{{/if}}\">\n  <div class=\"col-md-1\">\n    <input type=\"checkbox\" {{#if completed}}checked{{/if}} ></div> \n  <div class=\"col-sm-10 title\">{{title}}</div>\n  <div class=\"col-sm-10 title-edit hidden\">\n    <input type=\"text\" class=\"form-control\" value=\"{{title}}\" data-id=\"{{id}}\">\n  </div>\n  <div class=\"col-sm-1\">\n    <button type=\"button\" class=\"close\" aria-label=\"Close\">\n      <span aria-hidden=\"true\">&times;</span>\n    </button>\n  </div>\n</li>";
+	module.exports = "<li class=\"list-group-item row {{#if completed}}disabled{{/if}}\">\n  <div class=\"col-md-1\">\n    <input type=\"checkbox\" {{#if completed}}checked{{/if}} ></div> \n  <div class=\"col-sm-10 title\">{{title}}</div>\n  <div class=\"col-sm-10 title-edit hidden\">\n    <input type=\"text\" class=\"form-control\" value=\"{{title}}\" data-id=\"{{id}}\">\n  </div>\n  <div class=\"col-sm-1\">\n    <button type=\"button\" class=\"close\" aria-label=\"Close\">\n      <span aria-hidden=\"true\">&times;</span>\n    </button>\n  </div>\n</li> ";
 
 /***/ },
 /* 40 */
