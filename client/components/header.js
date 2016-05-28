@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import navbar from 'templates/navbar';
+import navbar from 'templates/navbar.html';
 
 var app = {
   init: function(){
@@ -13,4 +13,4 @@ var app = {
 
 module.exports = app;
 
-add event handler inside navbar 
+// add event handler inside navbar 

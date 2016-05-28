@@ -5,6 +5,7 @@ import todos from 'pages/todo';
 import project from 'pages/project';
 import funnySquares from 'pages/funnySquares';
 import header from 'components/header';
+import dayshop from 'pages/dayshop';
 
 $(function(){
 
@@ -19,10 +20,13 @@ $(function(){
       todos.init();
     break;
     case '/pages/project.html':
-      // init the project javascript
+      project.init();
     break;
     case '/pages/funnySquares.html':
       funnySquares.init();
+    break;
+    case '/pages/dayshop.html':
+      dayshop.init();
     break;
     default: break;  
   }
