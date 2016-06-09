@@ -217,4 +217,10 @@ h1 {
   transition: transform .5s;
 }
 
+.page-container {
+  width: 700px;
+  margin: 0 auto;
+  min-height: 100px;
+}
+
 /*# sourceMappingURL=main.css.map*/

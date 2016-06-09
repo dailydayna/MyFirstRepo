@@ -29,7 +29,7 @@
       "vars": "local",
       "args": "after-used"
     }],
-    "no-use-before-define": 2,       // http://eslint.org/docs/rules/no-use-before-define
+    "no-use-before-define": 0,       // http://eslint.org/docs/rules/no-use-before-define
 
 /**
  * Possible errors
@@ -137,7 +137,7 @@
     "no-trailing-spaces": 0,         // http://eslint.org/docs/rules/no-trailing-spaces
     "no-wrap-func": 2,               // http://eslint.org/docs/rules/no-wrap-func
     "no-underscore-dangle": 0,       // http://eslint.org/docs/rules/no-underscore-dangle
-    "one-var": [2, "never"],         // http://eslint.org/docs/rules/one-var
+    "one-var": [0, "never"],         // http://eslint.org/docs/rules/one-var
     "padded-blocks": [0, "never"],   // http://eslint.org/docs/rules/padded-blocks
     "semi": [2, "always"],           // http://eslint.org/docs/rules/semi
     "semi-spacing": [2, {            // http://eslint.org/docs/rules/semi-spacing

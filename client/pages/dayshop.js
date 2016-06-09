@@ -1,12 +1,7 @@
 var app = {
-	init: function (){
+	init: function(){
 		alert('This is where you give me money');
 	}
 };
 
 module.exports = app;
-
-
-
-
-
