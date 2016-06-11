@@ -157,6 +157,7 @@ TodoItemView = Backbone.View.extend({
   titleClicked: function(){
     this.$title.addClass('hidden');
     this.$titleEdit.removeClass('hidden');
+    this.$titleInput.focus();
   },
   titleEditConfirm: function(event){
     if (event.which === 13) {
